@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Documentation and web traffic analytics - Scarf Documentation</title>
+  <title>Documentation insights - Scarf Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Documentation and web traffic analytics";
+    var mkdocs_page_name = "Documentation insights";
     var mkdocs_page_input_path = "web-traffic.md";
     var mkdocs_page_url = null;
   </script>
@@ -60,7 +60,7 @@
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">Documentation and web traffic analytics</a>
+    <a class="current" href="./">Documentation insights</a>
     <ul class="subnav">
             
     <li class="toctree-l2"><a href="#features">Features</a></li>
@@ -73,6 +73,14 @@
     
 
     <li class="toctree-l2"><a href="#caveats">Caveats</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#data-precision">Data Precision</a></li>
+        
+            <li><a class="toctree-l3" href="#sources">Sources</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -110,7 +118,7 @@
     
       
     
-    <li>Documentation and web traffic analytics</li>
+    <li>Documentation insights</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -122,7 +130,7 @@
               
                 <p>Scarf can help you identify your commercial users via the web traffic to your project's documentation sites, README's, and other web properties. Unlike traditional javascript-based web analytics, image-based telemetry works in places where javascript execution is not accessible. Businesses that frequently view your project's documentation can be effective leads for landing support contracts or even sponsors, to financially support your project</p>
 <h3 id="features">Features</h3>
-<p>Scarf's project documentation analytics help you glean:</p>
+<p>Scarf's project documentation insights help you glean:</p>
 <ul>
 <li>Which businesses are looking at your project's documentation. </li>
 <li>Aggregated location information associated with this web traffic.</li>
@@ -130,10 +138,13 @@
 <li>Works in README's (or rendered docs generally), emails, and other places on the web where javascript is not typically executed.</li>
 </ul>
 <h3 id="how-it-works">How it works</h3>
-<p>Scarf's web traffic analytics are done via a simple transparent tracking pixel. You copy an <code>&lt;img&gt;</code> tag from Scarf into your project's README, docs, or any other web property, and any time a user loads the image from us, Scarf will look up any business metadata associated with the address and surface that information to you (and only you). Scarf does not store the IP address itself, so no personally identifying information is being collected. </p>
+<p>Scarf's web traffic insights are done via a simple transparent tracking pixel. You copy an <code>&lt;img&gt;</code> tag from Scarf into your project's README, docs, or any other web property, and any time a user loads the image from us, Scarf will look up any business metadata associated with the address and surface that information to you (and only you). Scarf does not store the IP address itself, so no personally identifying information is being collected. </p>
 <h3 id="getting-started">Getting started</h3>
-<p>Head to your Scarf dashboard and find the <code>Documentation Analytics Management</code> section. Give your pixel(s) a name, and optionally attach it to a package you manage on Scarf.Click the "copy" button to copy the <code>&lt;img&gt;</code> tag to you clipboard, and then simply paste the tag into your project's README and any other web properties.</p>
+<p>Head to your Scarf dashboard and find the <code>Documentation Insights Management</code> section. Give your pixel(s) a name, and optionally attach it to a package you manage on Scarf.Click the "copy" button to copy the <code>&lt;img&gt;</code> tag to you clipboard, and then simply paste the tag into your project's README and any other web properties.</p>
 <h3 id="caveats">Caveats</h3>
+<h4 id="data-precision">Data Precision</h4>
+<p>View counts from Documentation Insights data should be considered to be approximate and not exact. Page loads are a noisy signal, and Scarf's infrusture that serves your tracking pixel is optimized to always load quickly and never get in the way, rather than having an <em>exact</em> page load count.</p>
+<h4 id="sources">Sources</h4>
 <p>Pixel-based telemetry will work on standard webpages, rendered markdown documentation on package registry sites like <code>npm</code> and <code>PyPi</code>, and anywhere an image can be embedded, with a notable exception being GitHub. When GitHub renders markdown, it rewrites URL's from their original address to <code>https://camo.githubusercontent.com/&lt;path&gt;</code>, where GitHub hosts any linked images themselves. This cuts out the original host of that content from the equation, and therefor prevents Scarf from providing any insight to maintainers.</p>
               
             </div>
