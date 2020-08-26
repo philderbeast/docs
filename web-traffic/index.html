@@ -143,7 +143,7 @@
 <p>Head to your Scarf dashboard and find the <code>Documentation Insights Management</code> section. Give your pixel(s) a name, and optionally attach it to a package you manage on Scarf.Click the "copy" button to copy the <code>&lt;img&gt;</code> tag to you clipboard, and then simply paste the tag into your project's README and any other web properties.</p>
 <h3 id="caveats">Caveats</h3>
 <h4 id="data-precision">Data Precision</h4>
-<p>View counts from Documentation Insights data should be considered to be approximate and not exact. Page loads are a noisy signal, and Scarf's infrusture that serves your tracking pixel is optimized to always load quickly and never get in the way, rather than having an <em>exact</em> page load count.</p>
+<p>View counts from Documentation Insights data should be considered to be approximate and not exact. Page loads are a noisy signal, and Scarf's infrastructure that serves your tracking pixel is optimized to always load quickly and never get in the way, rather than having an <em>exact</em> page load count.</p>
 <h4 id="sources">Sources</h4>
 <p>Pixel-based telemetry will work on standard webpages, rendered markdown documentation on package registry sites like <code>npm</code> and <code>PyPi</code>, and anywhere an image can be embedded, with a notable exception being GitHub. When GitHub renders markdown, it rewrites URL's from their original address to <code>https://camo.githubusercontent.com/&lt;path&gt;</code>, where GitHub hosts any linked images themselves. This cuts out the original host of that content from the equation, and therefor prevents Scarf from providing any insight to maintainers.</p>
               
